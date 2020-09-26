@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>TripGuide admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/static/styles/images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/admin/main_styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="header">
+            <p id="mainPageLink" th:utext="'Excursions in Tour №'+ ${tour.id}"></p>
+        </div>
+
+        <div class="links">
+            <a href="/admin/home">Admin menu</a>
+            <a th:href="'/admin/tours/'+${tour.id}">Back to tour</a>
+            <a id="addNewExcursionLink">New excursion</a>
+        </div>
+
+        <form class="addExcursion" th:action="@{/admin/tours/__${tour.id}__/addexc}" th:object="${excursion}" th:method="post" id="addExcForm">
+            <label for="name" id="nameLabel">Name: </label>
+            <input type="text" name="name" id="name" th:field="*{title}" />
+
+            <label for="descr">Description: </label>
+            <input type="text" name="name" id="descr" th:field="*{description}" />
+
+            <label for="price">Price: </label>
+            <input type="number" name="name" id="price" th:field="*{price}" />
+
+            <label for="dateTimeFrom">Date and time from: </label>
+            <input type="datetime-local" name="dateTimeFrom" id="dateTimeFrom" th:field="*{start}" required />
+
+            <label for="dateTimeTill">Date and time to: </label>
+            <input type="datetime-local" name="dateTimeTill" id="dateTimeTill" th:field="*{end}" required />
+
+            <label for="meetingLoc">Meeting location </label>
+            <input type="text" name="meetingLoc" id="meetingLoc" th:field="*{meetingLocation}" required />
+
+            <button type="submit" id="addEventButton">Add</button>
+        </form>
+        <tbody>
+            <div class="excursions">
+
+                <tr th:each="exc: ${excursions}">
+                    <div class="excursion">
+                        <p th:utext="'<span class=\'destTitles\'>Name:</span> ' + ${exc.title}"></p>
+                        <p th:utext="'<span class=\'destTitles\'>Description:</span> ' + ${exc.description}"></p>
+                        <p th:utext="'<span class=\'destTitles\'>Price:</span> ' + ${exc.price}"></p>
+                        <p th:utext="'<span class=\'destTitles\'>Date and time from:</span> ' + ${exc.start}"></p>
+                        <p th:utext="'<span class=\'destTitles\'>Date and time to:</span> ' + ${exc.end}"></p>
+                        <p th:utext="'<span class=\'destTitles\'>Meeting location:</span> ' + ${exc.meetingLocation}"></p>
+                    </div>
+                </tr>
+            </div>
+        </tbody>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <!--===============================================================================================-->
+    <script>
+        $("#addNewExcursionLink").on('click', function() {
+            $("#addNewExcursionLink").toggleClass('clicked');
+            $(".addExcursion").toggleClass('showed');
+        })
+
+    </script>
+
+</body>
+
+</html>

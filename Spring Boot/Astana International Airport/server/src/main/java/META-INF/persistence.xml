@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit">
+        <class>server.model.AirlineEntity</class>
+        <class>server.model.EmployeeEntity</class>
+        <class>server.model.FlightEntity</class>
+        <class>server.model.PassengerEntity</class>
+        <class>server.model.PlaneEntity</class>
+        <class>server.model.PlaneseatEntity</class>
+        <class>server.model.TerminalEntity</class>
+        <class>server.model.TicketEntity</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:postgresql://kbss.felk.cvut.cz:5433/"/>
+            <property name="toplink.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://kbss.felk.cvut.cz:5433/"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:postgresql://kbss.felk.cvut.cz:5433/"/>
+            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://kbss.felk.cvut.cz:5433/"/>
+            <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>

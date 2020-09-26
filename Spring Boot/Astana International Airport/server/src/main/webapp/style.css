@@ -1,0 +1,44 @@
+.seatButton {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgb(100, 212, 85);
+    box-shadow: none;
+    padding: .7em 1.5em;
+    outline: none;
+    margin: 7px;
+    border: 0;
+}
+
+.notFreeSeat {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgb(212, 43, 19);
+    box-shadow: none;
+    padding: .7em 1.5em;
+    outline: none;
+    margin: 7px;
+    border: 0;
+}
+
+.seatButton:hover { background: rgb(134, 232, 113); }
+.seatButton:active { background: rgb(14, 129, 43); }
+
+.flightButton {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(100, 148, 199);
+    transition: 0.2s;
+    outline: none;
+    border: 0;
+}
+
+
+.flightButton:hover { background: rgb(58, 194, 199); }
+.flightButton:active {
+    background: rgb(33, 99, 147);
+}

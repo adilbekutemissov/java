@@ -1,0 +1,15 @@
+User tourist [ID: 1] ordered 2 tickets for excursion Sunrise Mount Batur Hike with Breakfast [ID:1]
+User "tourist [ID: 1]" ordered 2 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:1]"
+User "axelrbob [ID: 1]" ordered 1 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:1]"
+User "ismukmak [ID: 6]" ordered null tickets for excursion "Berlin 1-Hour City Cruise: History and Main Attractions [ID:19]"
+User "ismukmak [ID: 6]" ordered 2 tickets for excursion "sdsdsd [ID:28]"
+User "ismukmak [ID: 6]" ordered 100 tickets for excursion "Berlin 1-Hour City Cruise: History and Main Attractions [ID:19]"
+User "ismukmak [ID: 6]" ordered 3 tickets for excursion "Explore Berlin: Top Attractions Walking Tour [ID:20]"
+User "ismukmak [ID: 6]" ordered 23 tickets for excursion "All-in-One Berlin Shore Excursion from Warnemünde and Rostock Port [ID:21]"
+User "ismukmak [ID: 6]" ordered 4 tickets for excursion "All-in-One Berlin Shore Excursion from Warnemünde and Rostock Port [ID:21]"
+User "ismukmak [ID: 6]" ordered null tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]"
+User "ismukmak [ID: 6]" ordered 2 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]"
+User "ismukmak [ID: 6]" ordered 2 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]"
+User "ismukmak [ID: 6]" ordered 2 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]". 200 paid using Paypal.
+User "ismukmak [ID: 6]" ordered 2 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]". 
+User "ismukmak [ID: 6]" ordered 3 tickets for excursion "Sunrise Mount Batur Hike with Breakfast [ID:13]". 300 paid with credit/debit card

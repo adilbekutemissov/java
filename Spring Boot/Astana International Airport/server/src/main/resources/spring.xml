@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+        <bean id = "FlightService" class="server.service.FlightService"/>
+
+        <bean id="FlightController" class="server.controller.FlightController">
+            <constructor-arg ref="FlightService"/>
+        </bean>
+
+        <bean id="TicketService" class="server.service.TicketService"/>
+
+        <bean id = "TicketController" class="server.controller.TicketController">
+            <constructor-arg ref="TicketService"/>
+        </bean>
+
+        <bean id="PassengerService" class="server.service.PassengerService"/>
+
+        <bean id = "PassengerController" class="server.controller.PassengerController" >
+            <constructor-arg ref="PassengerService"/>
+        </bean>
+
+
+        <bean id = "BookTicketController" class="server.controller.BookTicketController">
+            <constructor-arg ref="PassengerController"/>
+            <constructor-arg ref="TicketController"/>
+            <constructor-arg ref="FlightController"/>
+        </bean>
+</beans>

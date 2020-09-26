@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "dd0a4099-49c1-497b-ba14-ad016d0fc580",
+		"name": "EAR_AIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPassengers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/passenger/getAllPassengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passenger",
+						"getAllPassengers"
+					]
+				},
+				"description": "getAllPasengers"
+			},
+			"response": []
+		},
+		{
+			"name": "createPassanger",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "08790cae-c4eb-4fd9-a814-6ef35f79a6d6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 13,\r\n    \"name\": \"Tratra\",\r\n    \"surname\": \"Tartar\",\r\n    \"email\": \"tar@gmail.com\",\r\n    \"password\": \"qwer123\",\r\n    \"phonenumber\": \"153426\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/passenger/create?name=CHACHA&surname=HUMh&email=chacha@gmail.com&password=65435&phone_number=9876543",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passenger",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "CHACHA"
+						},
+						{
+							"key": "surname",
+							"value": "HUMh"
+						},
+						{
+							"key": "email",
+							"value": "chacha@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "65435"
+						},
+						{
+							"key": "phone_number",
+							"value": "9876543"
+						}
+					]
+				},
+				"description": "Create passenger"
+			},
+			"response": []
+		},
+		{
+			"name": "getPassengerByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/passenger/getPassengerById?id=13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passenger",
+						"getPassengerById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSurname",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/passenger/updateEmail/12?email=MARTINU@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passenger",
+						"updateEmail",
+						"12"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "MARTINU@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePassangerById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/passenger/delete/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passenger",
+						"delete",
+						"13"
+					]
+				},
+				"description": "deletePassengerById"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllFlight",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/flight/getAllFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight",
+						"getAllFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFlightById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/flight/getFlightById?id=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight",
+						"getFlightById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTicket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"passengerid\": 1,\r\n    \"id\": 6,\r\n    \"flightid\": 13,\r\n    \"price\": 1500.00,\r\n    \"seatnumber\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTicket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket/getAllTicket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"getAllTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookingPlaneSeat",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/planeseat/bookingPlaneSeat/1/1?free=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planeseat",
+						"bookingPlaneSeat",
+						"1",
+						"1"
+					],
+					"query": [
+						{
+							"key": "free",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flight/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"airlineid\": 1,\n    \"arrival\": \"Test\",\n    \"planeid\": 7,\n    \"departmentdate\": \"{{$timestamp}}\",\n    \"arrilvalsdate\": \"{{$timestamp}}\",\n    \"department\": \"Test\",\n    \"distance\": 100,\n    \"terminalid\": 1,\n    \"id\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/flight/create?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "planeid",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "airlineid",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "departmentdate",
+							"value": "{% raw %}{{timestampHeader}}{% endraw %}",
+							"disabled": true
+						},
+						{
+							"key": "arrivalsdate",
+							"value": "{% raw %}{{timestampHeader}}{% endraw %}",
+							"disabled": true
+						},
+						{
+							"key": "department",
+							"value": "Prague",
+							"disabled": true
+						},
+						{
+							"key": "arrival",
+							"value": "Rome",
+							"disabled": true
+						},
+						{
+							"key": "distance",
+							"value": "1234",
+							"disabled": true
+						},
+						{
+							"key": "terminalid",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flight/create2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"planeid\": 1,\n    \"airlineid\": 1,\n    \"departmentdate\": \"2018-12-26T21:04:58.409+0000\",\n    \"arrilvalsdate\": \"2018-12-26T21:04:58.409+0000\",\n    \"department\": \"DUTUM\",\n    \"arrival\": \"TUDUM\",\n    \"distance\": 100,\n    \"terminalid\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/flight/create?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight",
+						"create"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "planeid",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "airlineid",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "departmentdate",
+							"value": "{% raw %}{{timestampHeader}}{% endraw %}",
+							"disabled": true
+						},
+						{
+							"key": "arrivalsdate",
+							"value": "{% raw %}{{timestampHeader}}{% endraw %}",
+							"disabled": true
+						},
+						{
+							"key": "department",
+							"value": "Prague",
+							"disabled": true
+						},
+						{
+							"key": "arrival",
+							"value": "Rome",
+							"disabled": true
+						},
+						{
+							"key": "distance",
+							"value": "1234",
+							"disabled": true
+						},
+						{
+							"key": "terminalid",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "airline/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"S7\",\r\n    \"email\": \"s7@mail.kz\",\r\n    \"phonenumber\": 776\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/airline/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airline",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 1,\r\n    \"airlineid\": 1,\r\n    \"email\": \"utemissov.a@mail.kz\",\r\n    \"password\": \"Alisher20102006\",\r\n    \"phonenumber\": 776\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "planeseat/showNumbersByPlaneid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/planeseat/showNumbersByPlaneid/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planeseat",
+						"showNumbersByPlaneid",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "airline/getAllAirline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/airline/getAllAirline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airline",
+						"getAllAirline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "planeseat/getPlaneSeatByID/1/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/planeseat/getPlaneSeatByID/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planeseat",
+						"getPlaneSeatByID",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
